@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  color: #373737;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 2.9vh;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer .wrapper .nav, .download-section .markets .android a, .download-section .markets .android, .download-section .markets .apple a, .download-section .markets .apple, .download-section .markets, .singup-section .wrapper .input-div a, .singup-section .wrapper .input-div, header nav ul li, header nav ul, header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .wrapper .img-and-rights, footer .wrapper, .content-before-singup-section, .content-after-main-screen-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-section, .singup-section .wrapper, .main-screen-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-section .markets .android::after, .download-section .markets .apple::after, .main-screen-section {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-screen-section h1 {
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 700;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+}
+
+.download-section p, .main-screen-section p {
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.content-before-singup-section .content-text a, .content-after-main-screen-section .content-text a, .main-screen-section a {
+  padding: 15px 47px;
+  background-color: #00afdb;
+  color: #fff;
+  font-size: 1.2vh;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.download-section .markets .android a, .download-section .markets .apple a {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100vw;
+  background-color: #000000;
+}
+header nav {
+  height: 10vh;
+}
+header nav ul {
+  gap: 8vw;
+}
+header nav ul li {
+  position: relative;
+  width: 5vw;
+}
+header nav ul li a {
+  color: rgb(255, 255, 255);
+}
+header nav ul li a img {
+  margin: 0 1vw;
+}
+header nav ul :first-child a {
+  font-weight: 600;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+header nav ul :hover a {
+  font-weight: 600;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+header nav ul :nth-child(3):hover a {
+  border-bottom: 0px solid rgb(255, 255, 255);
+}
+
+main {
+  margin-top: 10vh;
+}
+
+.main-screen-section {
+  position: relative;
+  height: 90vh;
+  background-image: url("../img/bg-image.png");
+}
+.main-screen-section h1 {
+  position: relative;
+  bottom: 6vh;
+  color: rgb(255, 255, 255);
+}
+.main-screen-section p {
+  position: relative;
+  bottom: 4vh;
+  max-width: 35vw;
+  color: rgb(255, 255, 255);
+}
+.main-screen-section a:hover {
+  transform: scale(1.3);
+}
+.main-screen-section img {
+  position: relative;
+  top: 25vh;
+}
+
+.wrapper {
+  max-width: 63vw;
+  margin: 0 auto;
+}
+
+.content-after-main-screen-section {
+  padding: 10vh 0;
+}
+.content-after-main-screen-section .content-text {
+  width: 40%;
+}
+.content-after-main-screen-section .content-text p {
+  margin: 2vh 0;
+}
+.content-after-main-screen-section .content-text a {
+  position: relative;
+  top: 1.22vh;
+}
+.content-after-main-screen-section .content-text a:hover {
+  transform: scale(1.3);
+}
+.content-after-main-screen-section .content-img {
+  width: 40%;
+}
+
+.content-before-singup-section {
+  padding: 13vh 0;
+}
+.content-before-singup-section .content-text {
+  width: 40%;
+}
+.content-before-singup-section .content-text p {
+  margin: 2vh 0;
+}
+.content-before-singup-section .content-text a {
+  position: relative;
+  top: 1.22vh;
+  display: inline-block;
+}
+.content-before-singup-section .content-text a:hover {
+  transform: scale(1.3);
+}
+.content-before-singup-section .content-img {
+  width: 40%;
+}
+
+.singup-section {
+  background-image: url("../img/singup-block.png");
+  height: 45vh;
+}
+.singup-section .wrapper {
+  height: 45vh;
+  gap: 2vh;
+}
+.singup-section .wrapper h2 {
+  color: rgb(255, 255, 255);
+}
+.singup-section .wrapper .input-div input {
+  width: 25vw;
+  height: 4vh;
+  outline: none;
+  border: none;
+  padding-left: 1.4vw;
+}
+.singup-section .wrapper .input-div a {
+  background-color: #00afdb;
+  width: 4vw;
+  height: 4vh;
+}
+
+.download-section {
+  height: 55vh;
+}
+.download-section p {
+  margin-top: 4vh;
+}
+.download-section .markets {
+  margin-top: 4vh;
+  margin-bottom: 6vh;
+  gap: 3vw;
+}
+.download-section .markets .apple {
+  width: 11vw;
+  height: 4vh;
+  background-color: #00afdb;
+}
+.download-section .markets .apple::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  left: 1.3vw;
+  width: 3vw;
+  height: 4vh;
+  background-color: #009CC2;
+  background-image: url(../img/icon-apple.svg);
+  background-size: inherit;
+}
+.download-section .markets .apple:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+.download-section .markets .android {
+  width: 11vw;
+  height: 4vh;
+  background-color: #00afdb;
+}
+.download-section .markets .android::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  left: 1.3vw;
+  width: 3vw;
+  height: 4vh;
+  background-color: #009CC2;
+  background-image: url(../img/icon-android.svg);
+  background-size: inherit;
+}
+.download-section .markets .android:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+footer {
+  height: 19vh;
+  background-color: #000000;
+}
+footer .wrapper {
+  height: 19vh;
+  color: rgb(255, 255, 255);
+}
+footer .wrapper .nav {
+  flex-basis: 50%;
+  justify-content: space-evenly;
+}
+footer .wrapper .nav a {
+  color: rgb(255, 255, 255);
+  border-right: rgb(255, 255, 255) 1px solid;
+  padding-right: 3vw;
+}
+footer .wrapper .nav :last-child {
+  border-right: none;
+}
+footer .wrapper .img-and-rights {
+  flex-basis: 50%;
+}/*# sourceMappingURL=style.css.map */

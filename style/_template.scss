@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+    color: #373737;
+    font-feature-settings: "clig" off, "liga" off;
+    font-size: 2.9vh;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }  
+
+a {
+  text-decoration: none;
+}
+
+%dislplay-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%dislplay-flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+%dislplay-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%bg-position {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+%h1 {
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 700;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+}
+
+%p-main-screen {
+  text-align: center;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+%blue-button {
+  padding: 15px 47px;
+  background-color: #00afdb;
+  color: #fff;
+  font-size: 1.2vh;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+%button-text-market {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+

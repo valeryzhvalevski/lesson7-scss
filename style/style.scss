@@ -1,0 +1,300 @@
+@import "./vars";
+@import "./template";
+
+body {
+  position: relative;
+  font-family: $font-fam;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100vw;
+  background-color: $bg-color;
+
+  nav {
+    @extend %dislplay-flex-center;
+    height: 10vh;
+
+    ul {
+      @extend %dislplay-flex-center;
+      gap: 8vw;
+
+      li {
+        @extend %dislplay-flex-center;
+        position: relative;
+        width: 5vw;
+
+        a {
+          color: $header-text-color;
+
+          img {
+            margin: 0 1vw;
+          }
+        }
+      }
+
+      :first-child {
+        a {
+          font-weight: $bold-text;
+          border-bottom: 2px solid $header-text-color;
+        }
+      }
+
+      :hover {
+        a {
+          font-weight: $bold-text;
+          border-bottom: 2px solid $header-text-color;
+        }
+      }
+
+      :nth-child(3):hover {
+        a {
+          border-bottom: 0px solid $header-text-color;
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 10vh;
+}
+
+.main-screen-section {
+  position: relative;
+  height: 90vh;
+  background-image: url("../img/bg-image.png");
+  @extend %bg-position;
+  @extend %dislplay-flex-column;
+
+  h1 {
+    position: relative;
+    bottom: 6vh;
+    color: $main-screen-section-text-color;
+    @extend %h1;
+  }
+
+  p {
+    position: relative;
+    bottom: 4vh;
+    max-width: 35vw;
+    color: $main-screen-section-text-color;
+    @extend %p-main-screen;
+  }
+
+  a {
+    @extend %blue-button;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  img {
+    position: relative;
+    top: 25vh;
+  }
+}
+
+.wrapper {
+  max-width: 63vw;
+  margin: 0 auto;
+}
+
+.content-after-main-screen-section {
+  @extend %dislplay-flex-space-between;
+  padding: 10vh 0;
+
+  .content-text {
+    width: 40%;
+
+    p {
+      margin: 2vh 0;
+    }
+
+    a {
+      position: relative;
+      top: 1.22vh;
+      @extend %blue-button;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  .content-img {
+    width: 40%;
+  }
+}
+
+.content-before-singup-section {
+  @extend %dislplay-flex-space-between;
+  padding: 13vh 0;
+
+  .content-text {
+    width: 40%;
+
+    p {
+      margin: 2vh 0;
+    }
+
+    a {
+      @extend %blue-button;
+      position: relative;
+      top: 1.22vh;
+      display: inline-block;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+  .content-img {
+    width: 40%;
+  }
+}
+
+.singup-section {
+  background-image: url("../img/singup-block.png");
+  height: 45vh;
+
+  .wrapper {
+    height: 45vh;
+    @extend %dislplay-flex-column;
+    gap: 2vh;
+
+    h2 {
+      color: $main-screen-section-text-color;
+    }
+
+    .input-div {
+      @extend %dislplay-flex-center;
+
+      input {
+        width: 25vw;
+        height: 4vh;
+        outline: none;
+        border: none;
+        padding-left: 1.4vw;
+      }
+
+      a {
+        background-color: $blue-color;
+        width: 4vw;
+        height: 4vh;
+        @extend %dislplay-flex-center;
+      }
+    }
+  }
+}
+
+.download-section {
+  height: 55vh;
+  @extend %dislplay-flex-column;
+
+  p {
+    margin-top: 4vh;
+    @extend %p-main-screen;
+  }
+
+  .markets {
+    @extend %dislplay-flex-center;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+    gap: 3vw;
+
+    .apple {
+      width: 11vw;
+      height: 4vh;
+      background-color: $blue-color;
+      @extend %dislplay-flex-center;
+
+      a {
+        @extend %dislplay-flex-center;
+        @extend %button-text-market;
+
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        left: 1.3vw;
+        width: 3vw;
+        height: 4vh;
+        background-color: $dark-blue-color;
+        background-image: url(../img/icon-apple.svg);
+        @extend %bg-position;
+        background-size: inherit;
+      }
+      &:hover {
+        transform: scale(1.3);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .android {
+      width: 11vw;
+      height: 4vh;
+      background-color: $blue-color;
+      @extend %dislplay-flex-center;
+
+      a {
+        @extend %dislplay-flex-center;
+        @extend %button-text-market;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        left: 1.3vw;
+        width: 3vw;
+        height: 4vh;
+        background-color: $dark-blue-color;
+        background-image: url(../img/icon-android.svg);
+        @extend %bg-position;
+        background-size: inherit;
+      }
+      &:hover {
+        transform: scale(1.3);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+}
+
+footer {
+  height: 19vh;
+  background-color: $bg-color;
+
+  .wrapper {
+    @extend %dislplay-flex-space-between;
+    height: 19vh;
+    color: $header-text-color;
+
+    .nav {
+      flex-basis: 50%;
+      @extend %dislplay-flex-center;
+      justify-content: space-evenly;
+
+      a {
+        color: $header-text-color;
+        border-right: $header-text-color 1px solid;
+        padding-right: 3vw;
+      }
+
+      :last-child {
+        border-right: none;
+      }
+    }
+
+    .img-and-rights {
+      flex-basis: 50%;
+      @extend %dislplay-flex-space-between;
+    }
+  }
+}
